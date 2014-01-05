@@ -1,0 +1,166 @@
+body {
+  background-image: url('images/bg.png');
+  color: white;
+  font-family: 'Helvetica Neue', 'helvetica', sans-serif;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+  padding-top: 28px;
+}
+
+h1 {
+  margin: 30px 0px 30px 50px;
+  font-size: 30pt;
+  font-weight: 200;
+  color: gray;
+}
+
+#layout {
+  padding: 0;
+  margin: 0;
+
+  td {
+    width: 50%;
+
+    &.left {
+      padding: 0px 25px 50px 50px;
+    }
+
+    &.right {
+      padding: 0px 50px 50px 25px;
+    }
+  }
+}
+
+#powered {
+  position: fixed;
+  bottom: 30px;
+  opacity: 0.8;
+  margin-left: -488px;
+  left: 50%;
+}
+
+table.scores {
+
+  box-sizing: border-box;
+  font-size: 30pt;
+  width: 100%;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  box-shadow: 0px 0px 45px 3px hsla(0,0%,100%,0.7);
+
+  tr {
+    color: #dedede;
+
+    &.Mike, &.John {
+      color: #71d6ff;
+    }
+
+    &.Ralph, &.Tom  {
+      color: #fdff91;
+    }
+  }
+
+  td {
+    padding: 5px;
+  }
+
+  .score {
+    text-align: right;
+    font-weight: 100;
+  }
+}
+
+.teamscore, .map {
+
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 30pt;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  box-shadow: 0px 0px 45px 3px hsla(0,0%,100%,0.7);
+  vertical-align: top;
+
+  .team {
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    color: #dedede;
+
+    &.team1 {
+      color: #71d6ff;
+    }
+
+    &.team2 {
+      color: #fdff91;
+    }
+
+    .score {
+      font-weight: 100;
+      text-align: right;
+    }
+  }
+}
+
+h1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.map {
+  margin-top: 30px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+
+  div{
+    opacity: 0.95;
+    height: 237px;
+    background-image: url(images/map.png);
+    background-position: -287px -305px;
+  }
+
+  .blink {
+    display: block;
+    position: absolute;
+    background-color: orangered;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+
+    &.blink1 {
+      top: 101px;
+      left: 369px;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-name: blink;
+      -webkit-animation-iteration-count: infinite;
+    }
+
+    &.blink2 {
+      top: 101px;
+      left: 380px;
+      -webkit-animation-duration: 2.5s;
+      -webkit-animation-name: blink;
+      -webkit-animation-iteration-count: infinite;
+    }
+  }
+}
+

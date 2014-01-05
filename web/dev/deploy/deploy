@@ -1,0 +1,19 @@
+#!/bin/bash
+
+server=root@ec2-a
+rootDir=/Projects/Pointr
+projectDir="${rootDir}/web"
+
+pushd $projectDir
+
+# -- Pre-commands
+
+ssh $server "mkdir -pv ${rootDir}/web/src"
+
+# src
+rsync -avz --delete --exclude=".git" --exclude=".DS_Store" ${rootDir}/web/src/ $server:${rootDir}/web/src/
+
+# vendors
+# rsync -avz --delete --exclude=".git" --exclude=".DS_Store" ${rootDir}/web/vendor/ $server:${rootDir}/web/vendor/
+
+popd

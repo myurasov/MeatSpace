@@ -1,0 +1,144 @@
+body {
+  background-image: url('images/bg.png');
+  color: white;
+  font-family: 'Helvetica Neue', 'helvetica', sans-serif;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+  padding-top: 28px;
+}
+h1 {
+  margin: 30px 0px 30px 50px;
+  font-size: 30pt;
+  font-weight: 200;
+  color: gray;
+}
+#layout {
+  padding: 0;
+  margin: 0;
+}
+#layout td {
+  width: 50%;
+}
+#layout td.left {
+  padding: 0px 25px 50px 50px;
+}
+#layout td.right {
+  padding: 0px 50px 50px 25px;
+}
+#powered {
+  position: fixed;
+  bottom: 30px;
+  opacity: 0.8;
+  margin-left: -488px;
+  left: 50%;
+}
+table.scores {
+  box-sizing: border-box;
+  font-size: 30pt;
+  width: 100%;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  box-shadow: 0px 0px 45px 3px rgba(255, 255, 255, 0.7);
+}
+table.scores tr {
+  color: #dedede;
+}
+table.scores tr.Mike,
+table.scores tr.John {
+  color: #71d6ff;
+}
+table.scores tr.Ralph,
+table.scores tr.Tom {
+  color: #fdff91;
+}
+table.scores td {
+  padding: 5px;
+}
+table.scores .score {
+  text-align: right;
+  font-weight: 100;
+}
+.teamscore,
+.map {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 30pt;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  box-shadow: 0px 0px 45px 3px rgba(255, 255, 255, 0.7);
+  vertical-align: top;
+}
+.teamscore .team,
+.map .team {
+  color: #dedede;
+}
+.teamscore .team:first-child,
+.map .team:first-child {
+  margin-left: 0;
+}
+.teamscore .team.team1,
+.map .team.team1 {
+  color: #71d6ff;
+}
+.teamscore .team.team2,
+.map .team.team2 {
+  color: #fdff91;
+}
+.teamscore .team .score,
+.map .team .score {
+  font-weight: 100;
+  text-align: right;
+}
+h1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@-webkit-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.map {
+  margin-top: 30px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.map div {
+  opacity: 0.95;
+  height: 237px;
+  background-image: url(images/map.png);
+  background-position: -287px -305px;
+}
+.map .blink {
+  display: block;
+  position: absolute;
+  background-color: orangered;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+.map .blink.blink1 {
+  top: 101px;
+  left: 369px;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: blink;
+  -webkit-animation-iteration-count: infinite;
+}
+.map .blink.blink2 {
+  top: 101px;
+  left: 380px;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-name: blink;
+  -webkit-animation-iteration-count: infinite;
+}

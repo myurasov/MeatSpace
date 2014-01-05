@@ -1,0 +1,8 @@
+{
+  "name": "Pointr",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "*",
+    "underscore": "*"
+  }
+}
