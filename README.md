@@ -1,5 +1,5 @@
-MeatSpace
-=========
+MeatSpace (codename Pointr)
+===========================
 
 AT&amp;T Dev Summit Hackathon 2014 Project
 
