@@ -1,4 +1,3 @@
-
 server.log("Device Started");
  
 arduino <- hardware.uart12;
